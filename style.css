@@ -17,7 +17,7 @@ p {
   line-height: 1.65em;
 }
 
-/* General layout */
+/* Content area */
 
 div.container {
   max-width: 920px;
@@ -32,6 +32,50 @@ article.post:last-of-type {
   border-bottom: none;
 }
 
+/*aside styles*/
+
+article.post-aside, article.post-link {
+  font-size: 125%;
+  background: #fff5cb;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  border-bottom: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+}
+.mini-meta {
+  font-size: 68%;
+  margin: 0;
+  color: #777;
+}
+
+/*Link post format styles*/
+
+article.post-link {
+  padding: 0;
+  background: #e0ebff
+}
+article.post-link a {
+  display: block;
+  padding: 20px;
+}
+
+/*post gallery styles*/
+
+article.post-gallery {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-bottom: none;
+}
+article.post-gallery img {
+  border: none !important;
+}
+article.post-gallery h2 {
+  text-align: center;
+}
+
 /*header*/
 
 .site-header {
@@ -41,10 +85,50 @@ article.post:last-of-type {
   margin-bottom: 50px;
 }
 
-/*footer*/
+/*Main column*/
+.main-column {
+  width: 78%;
+  float: left;
+}
+.secondary-column {
+  width: 20%;
+  float: right;
+}
 
+/*footer*/
 .site-footer {
   border-top: 1px solid #999;
+}
+
+#footer-sidebar {
+display:block;
+height: 250px;
+}
+
+#footer-sidebar1 {
+float: left;
+width: 340px;
+margin-left:5px;
+margin-right:5px;
+}
+
+#footer-sidebar2 {
+float: left;
+width: 340px;
+margin-right:5px;
+}
+
+#footer-sidebar3 {
+float: left;
+width: 340px;
+}
+
+/*footer widget area*/
+.footer-widget-area {
+  width: 25%;
+  float: left;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 
 /*navigation*/
@@ -85,11 +169,11 @@ article.post:last-of-type {
 }
 
 /*make menu list active*/
+
+
 /*.current-menu-item is a WP function for menu active */
-.site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited,
-.site-header nav ul li.current-page-ancestor a:link,
-.site-header nav ul li.current-page-ancestor a:visited{
+
+.site-header nav ul li.current-menu-item a:link, .site-header nav ul li.current-menu-item a:visited, .site-header nav ul li.current-page-ancestor a:link, .site-header nav ul li.current-page-ancestor a:visited {
   background: #006ec3;
   color: white;
 }
@@ -109,19 +193,22 @@ article.post:last-of-type {
 article.page h2 {
   font-size: 300%;
 }
+
 /*clearfix*/
-.clearfix:before, .clearfix:after{
+
+.clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-.clearfix:after{
+.clearfix:after {
   clear: both;
 }
-.clearfix{
+.clearfix {
   *zoom: 1;
 }
 
 /*portfolio tempalte*/
+
 div.title-column {
   width: 30%;
   float: left;
@@ -132,41 +219,39 @@ div.text-column {
 }
 
 /*info box*/
-div.info-box{
+
+div.info-box {
   width: 30%;
   float: right;
   margin: 0 0 30px 30px;
   padding: 20px;
   background: #eee;
 }
-div.info-box h4{
+div.info-box h4 {
   margin-bottom: 6px;
 }
-div.info-box p{
+div.info-box p {
   font-size: 85%;
 }
 
 /*children links*/
-.children-links{
+
+.children-links {
   margin: 20px;
   font-size: 80%;
 }
-.children-links li{
+.children-links li {
   margin-right: 20px;
 }
-.children-links a:link,
-.children-links a:visited{
+.children-links a:link, .children-links a:visited {
   text-decoration: none;
 }
-.children-links .current_page_item a:link,
-.children-links .current_page_item a:visited{
+.children-links .current_page_item a:link, .children-links .current_page_item a:visited {
   border-bottom: 1px solid #ddd;
   color: #333;
   cursor: default;
 }
-
-
-.children-links .parent-link{
+.children-links .parent-link {
   float: left;
   margin-right: 20px;
   padding-right: 20px;
@@ -174,56 +259,56 @@ div.info-box p{
   font-size: 120%;
   font-weight: bold;
 }
-.children-links .parent-link a:link,
-.children-links .parent-link a:visited{
+.children-links .parent-link a:link, .children-links .parent-link a:visited {
   color: #333;
 }
 
 /*post styles*/
-.post h2{
+
+.post h2 {
   margin-bottom: 0;
 }
-p.post-info{
+p.post-info {
   font-size: 87%;
   color: #999;
 }
-p.post-info a:link,
-p.post-info a:visited{
+p.post-info a:link, p.post-info a:visited {
   color: #999;
 }
 
 /*image style*/
-img{
+
+img {
   max-width: 100%;
   height: auto;
 }
-.has-thumbnail{
+.has-thumbnail {
   position: relative;
   padding-left: 200px;
 }
-.post-thumbnail{
+.post-thumbnail {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
 }
 
 /*search form*/
-div.hd-search{
+
+div.hd-search {
   float: right;
 }
-div.hd-search label{
+div.hd-search label {
   position: absolute;
   left: -9999px;
 }
-
-div.hd-search #searchsubmit{
+div.hd-search #searchsubmit {
   background: #006ec3;
   color: #fff;
   padding: 5px 14px;
   border: none;
   vertical-align: top;
 }
-div.hd-search #s{
+div.hd-search #s {
   vertical-align: top;
   padding: 3px 0;
 }

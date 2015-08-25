@@ -1,17 +1,24 @@
 <!-- index php control the output on screen -->
-<?php
+<?php get_header(); ?>
 
-get_header(); // get theme header
+<div class="site-content clearfix">
+  <div class="main-column">
+    <?php if (have_posts()): // WP loop all posts
 
-if (have_posts()): // WP loop all posts
+      while (have_posts()) : the_post();
+        get_template_part('content', get_post_format());
+      endwhile;
 
-  while (have_posts()) : the_post();
-    get_template_part('content');
-  endwhile;
+    else:
+      echo '<p>No content found</p>';
+    endif; ?>
+  </div>
 
-else:
-  echo '<p>No content found</p>';
-endif;
 
-get_footer(); // get theme footer
- ?>
+  <div class="secondary-column">
+    <?php dynamic_sidebar('sidebar'); ?>
+  </div>
+</div>
+
+
+<?php get_footer(); ?>

@@ -43,8 +43,61 @@ function WP_theme_setup(){
   add_theme_support('post-thumbnails');
   add_image_size('small-thumbnail', 180, 120, true); // set feature image size;
   add_image_size('banner-image', 920, 210, array('left', 'top')); // set feature image size;
+
+  // add post format support
+  add_theme_support('post-formats', array('aside', 'gallery', 'link'));
+
 }
 add_action('after_setup_theme', 'WP_theme_setup');
+
+// register widget
+function arphabet_widgets_init() {
+
+	register_sidebar( array( // register sidebar widget location
+		'name' => 'Sidebar',
+		'id' => 'sidebar',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	) );
+
+  register_sidebar( array(
+    'name' => 'Footer Area1',
+    'id' => 'footer-area-1',
+    'before_widget' => '<div>',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name' => 'Footer Area2',
+    'id' => 'footer-area-2',
+    'before_widget' => '<div>',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name' => 'Footer Area3',
+    'id' => 'footer-area-3',
+    'before_widget' => '<div>',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name' => 'Footer Area4',
+    'id' => 'footer-area-4',
+    'before_widget' => '<div>',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+
 
 
  ?>
