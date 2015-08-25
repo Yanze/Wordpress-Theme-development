@@ -1,0 +1,229 @@
+/*
+Theme Name: MyFirstTheme
+Author: Yanze Liu
+Author URL:
+Version: 1.0
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+a:link, a:visited {
+  color: #006ec3;
+}
+p {
+  line-height: 1.65em;
+}
+
+/* General layout */
+
+div.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+article.post {
+  border-bottom: 2px dotted #bbbbbb;
+}
+article.post:last-of-type {
+  border-bottom: none;
+}
+
+/*header*/
+
+.site-header {
+  border-bottom: 1px solid #999;
+}
+.site-header h5 {
+  margin-bottom: 50px;
+}
+
+/*footer*/
+
+.site-footer {
+  border-top: 1px solid #999;
+}
+
+/*navigation*/
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.site-nav ul::before, .site-nav ul::after {
+  content: "";
+  display: table;
+}
+.site-nav ul::after {
+  clear: both;
+}
+.site-nav ul {
+  *zoom: 1;
+}
+.site-nav ul li {
+  list-style: none;
+  float: left;
+}
+
+/*header menu*/
+
+.site-header nav ul li {
+  margin-right: 5px;
+}
+.site-header nav ul li a:link, .site-header nav ul li a:visited {
+  display: block;
+  padding: 10px 18px;
+  border: 1px solid #bbb;
+  border-bottom: none;
+  text-decoration: none;
+}
+.site-header nav ul li a:hover {
+  background: #ececec;
+}
+
+/*make menu list active*/
+/*.current-menu-item is a WP function for menu active */
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited{
+  background: #006ec3;
+  color: white;
+}
+
+/*footer menu*/
+
+.site-footer nav ul li {
+  margin: 15px;
+  padding: 10px 10px 10px 10px;
+}
+.site-footer p {
+  font-size: small;
+}
+
+/*page layout*/
+
+article.page h2 {
+  font-size: 300%;
+}
+/*clearfix*/
+.clearfix:before, .clearfix:after{
+  content: "";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
+}
+
+/*portfolio tempalte*/
+div.title-column {
+  width: 30%;
+  float: left;
+}
+div.text-column {
+  width: 70%;
+  float: right;
+}
+
+/*info box*/
+div.info-box{
+  width: 30%;
+  float: right;
+  margin: 0 0 30px 30px;
+  padding: 20px;
+  background: #eee;
+}
+div.info-box h4{
+  margin-bottom: 6px;
+}
+div.info-box p{
+  font-size: 85%;
+}
+
+/*children links*/
+.children-links{
+  margin: 20px;
+  font-size: 80%;
+}
+.children-links li{
+  margin-right: 20px;
+}
+.children-links a:link,
+.children-links a:visited{
+  text-decoration: none;
+}
+.children-links .current_page_item a:link,
+.children-links .current_page_item a:visited{
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  cursor: default;
+}
+
+
+.children-links .parent-link{
+  float: left;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+  font-size: 120%;
+  font-weight: bold;
+}
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited{
+  color: #333;
+}
+
+/*post styles*/
+.post h2{
+  margin-bottom: 0;
+}
+p.post-info{
+  font-size: 87%;
+  color: #999;
+}
+p.post-info a:link,
+p.post-info a:visited{
+  color: #999;
+}
+
+/*image style*/
+img{
+  max-width: 100%;
+  height: auto;
+}
+.has-thumbnail{
+  position: relative;
+  padding-left: 200px;
+}
+.post-thumbnail{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+/*search form*/
+div.hd-search{
+  float: right;
+}
+div.hd-search label{
+  position: absolute;
+  left: -9999px;
+}
+
+div.hd-search #searchsubmit{
+  background: #006ec3;
+  color: #fff;
+  padding: 5px 14px;
+  border: none;
+  vertical-align: top;
+}
+div.hd-search #s{
+  vertical-align: top;
+  padding: 3px 0;
+}
