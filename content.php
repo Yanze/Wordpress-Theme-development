@@ -23,13 +23,11 @@
      ?>
   </p>
 
-    <?php if ($post->post_excerpt){ ?>
+<!-- excerption -->
       <p>
         <?php echo get_the_excerpt(); ?>
-        <a href="<?php the_permalink(); ?>">Read more&raquo;</a>
+        <a href="<?php the_permalink(); ?>">Continue Reading &raquo;</a>
       </p>
-      <?php } else{
-        the_content();
-     } ?>
+
 
 </article>
