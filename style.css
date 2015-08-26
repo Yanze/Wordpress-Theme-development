@@ -100,28 +100,6 @@ article.post-gallery h2 {
   border-top: 1px solid #999;
 }
 
-#footer-sidebar {
-display:block;
-height: 250px;
-}
-
-#footer-sidebar1 {
-float: left;
-width: 340px;
-margin-left:5px;
-margin-right:5px;
-}
-
-#footer-sidebar2 {
-float: left;
-width: 340px;
-margin-right:5px;
-}
-
-#footer-sidebar3 {
-float: left;
-width: 340px;
-}
 
 /*footer widget area*/
 .footer-widget-area {
@@ -311,4 +289,16 @@ div.hd-search #searchsubmit {
 div.hd-search #s {
   vertical-align: top;
   padding: 3px 0;
+}
+/*post columns*/
+.home-columns {
+  padding-top: 30px;
+}
+.one-half {
+  width: 45%;
+  float: left;
+  margin-right: 10%;
+}
+.last {
+  margin-right: 0;
 }

@@ -13,11 +13,7 @@
       echo '<p>No content found</p>';
     endif; ?>
   </div>
-
-
-  <div class="secondary-column">
-    <?php dynamic_sidebar('sidebar'); ?>
-  </div>
+<?php get_sidebar(); ?>
 </div>
 
 

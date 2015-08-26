@@ -58,8 +58,8 @@ function arphabet_widgets_init() {
 		'id' => 'sidebar',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widget-title">',
-		'after_title' => '</h2>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
 	) );
 
   register_sidebar( array(
@@ -67,32 +67,32 @@ function arphabet_widgets_init() {
     'id' => 'footer-area-1',
     'before_widget' => '<div>',
     'after_widget' => '</div>',
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
   ) );
   register_sidebar( array(
     'name' => 'Footer Area2',
     'id' => 'footer-area-2',
     'before_widget' => '<div>',
     'after_widget' => '</div>',
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
   ) );
   register_sidebar( array(
     'name' => 'Footer Area3',
     'id' => 'footer-area-3',
     'before_widget' => '<div>',
     'after_widget' => '</div>',
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
   ) );
   register_sidebar( array(
     'name' => 'Footer Area4',
     'id' => 'footer-area-4',
     'before_widget' => '<div>',
     'after_widget' => '</div>',
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
   ) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
