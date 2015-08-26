@@ -8,7 +8,7 @@ if (have_posts()): // WP loop all posts
   while (have_posts()) : the_post(); ?>
 
   <article class="post">
-    <h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h2>
+    <h2><a class="post-title" href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h2>
     <p class="post-info">
       <!-- wordpress fonction to output the date and author -->
       <?php the_time('F jS, Y'); ?> at <?php the_time('g:i a'); ?>  | by <a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> | Posted in

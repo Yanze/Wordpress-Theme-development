@@ -20,16 +20,19 @@ p {
 /* Content area */
 
 div.container {
-  max-width: 920px;
+  max-width: 100%;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 article.post {
   border-bottom: 2px dotted #bbbbbb;
 }
 article.post:last-of-type {
   border-bottom: none;
+}
+.post-title {
+  text-decoration: none;
 }
 
 /*aside styles*/
@@ -53,11 +56,12 @@ article.post-aside, article.post-link {
 
 article.post-link {
   padding: 0;
-  background: #e0ebff
+  background: #e0ebff;
 }
 article.post-link a {
   display: block;
   padding: 20px;
+    border-bottom: none;
 }
 
 /*post gallery styles*/
@@ -131,7 +135,6 @@ article.post-gallery h2 {
 }
 
 /*header menu*/
-
 .site-header nav ul li {
   margin-right: 5px;
 }
@@ -146,18 +149,18 @@ article.post-gallery h2 {
   background: #ececec;
 }
 
-/*make menu list active*/
-
 
 /*.current-menu-item is a WP function for menu active */
 
-.site-header nav ul li.current-menu-item a:link, .site-header nav ul li.current-menu-item a:visited, .site-header nav ul li.current-page-ancestor a:link, .site-header nav ul li.current-page-ancestor a:visited {
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited {
   background: #006ec3;
   color: white;
 }
 
 /*footer menu*/
-
 .site-footer nav ul li {
   margin: 15px;
   padding: 10px 10px 10px 10px;
@@ -167,13 +170,11 @@ article.post-gallery h2 {
 }
 
 /*page layout*/
-
 article.page h2 {
   font-size: 300%;
 }
 
 /*clearfix*/
-
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
@@ -213,7 +214,6 @@ div.info-box p {
 }
 
 /*children links*/
-
 .children-links {
   margin: 20px;
   font-size: 80%;
@@ -242,7 +242,6 @@ div.info-box p {
 }
 
 /*post styles*/
-
 .post h2 {
   margin-bottom: 0;
 }
@@ -255,7 +254,6 @@ p.post-info a:link, p.post-info a:visited {
 }
 
 /*image style*/
-
 img {
   max-width: 100%;
   height: auto;
@@ -271,7 +269,6 @@ img {
 }
 
 /*search form*/
-
 div.hd-search {
   float: right;
 }
@@ -279,17 +276,22 @@ div.hd-search label {
   position: absolute;
   left: -9999px;
 }
-div.hd-search #searchsubmit {
+.btn,
+.btn:link,
+.btn:visited {
   background: #006ec3;
   color: #fff;
-  padding: 5px 14px;
   border: none;
-  vertical-align: top;
+  padding: 4px;
+}
+.btn:hover{
+  background: #258ad7;
 }
 div.hd-search #s {
   vertical-align: top;
   padding: 3px 0;
 }
+
 /*post columns*/
 .home-columns {
   padding-top: 30px;
@@ -301,4 +303,14 @@ div.hd-search #s {
 }
 .last {
   margin-right: 0;
+}
+
+/*front page posts*/
+div.front-page-thumbnail {
+  float: left;
+  margin-right: 15px;
+  width: 25%;
+}
+div.front-page-excerpt {
+  position: relative;
 }

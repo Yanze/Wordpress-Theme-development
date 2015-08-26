@@ -97,7 +97,68 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
+//customize appearance options stars here ***
+function customize_options_register($wp_customize){
+  $wp_customize->add_setting('wp_link_color', array(
+    'default' => '#006ec3',
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting('wp_btn_color', array(
+    'default' => '#006ec3',
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting('wp_btn_hover_color', array(
+    'default' => '#258ad7',
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_section('wp_standard_color', array(
+    'title' => __('Standard Colors', 'myFirstTheme'),
+    'priorty' => 30,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_control($wp_customize, 'wp_link_color_control', array(
+    'label' => __('Link Color', 'myFirstTheme'),
+    'section' => 'wp_standard_color',
+    'settings' => 'wp_link_color',
+  )));
+  $wp_customize->add_control(new WP_Customize_Color_control($wp_customize, 'wp_btn_color_control', array(
+    'label' => __('Button Color', 'myFirstTheme'),
+    'section' => 'wp_standard_color',
+    'settings' => 'wp_btn_color',
+  )));
+  $wp_customize->add_control(new WP_Customize_Color_control($wp_customize, 'wp_btn_hover_color_control', array(
+    'label' => __('Button Hover Color', 'myFirstTheme'),
+    'section' => 'wp_standard_color',
+    'settings' => 'wp_btn_hover_color',
+  )));
+}
+add_action('customize_register', 'customize_options_register');
 
+//ouptput customize css on Dashoboard Appearance Customize
+function customizeCSS(){ ?>
+  <style type='text/css'>
+  a:link,
+  a:visited{
+    color: <?php echo get_theme_mod('wp_link_color'); ?>;
+  }
 
+  .site-header nav ul li.current-menu-item a:link,
+  .site-header nav ul li.current-menu-item a:visited,
+  .site-header nav ul li.current-page-ancestor a:link,
+  .site-header nav ul li.current-page-ancestor a:visited {
+    background: <?php echo get_theme_mod('wp_link_color'); ?>;
+  }
+
+   .btn {
+    background: <?php echo get_theme_mod('wp_btn_color'); ?>;
+  }
+
+  .btn:hover {
+   background: <?php echo get_theme_mod('wp_btn_hover_color'); ?>;
+ }
+
+  </style>
+<?php }
+add_action('wp_head', 'customizeCSS');
+//customize appearance options finish here ***
 
  ?>
